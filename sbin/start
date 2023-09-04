@@ -1,0 +1,40 @@
+#!/bin/sh
+#set -x
+curpath=`pwd`
+runpath=$(dirname $(pwd))
+argcount=$#
+excname=$1
+export LD_LIBRARY_PATH=../lib/
+
+
+check_process_status()
+{
+    count=`ps -ef|grep -w $1|grep -v grep|grep -v start|wc -l`
+
+    if [ ${count} -gt 0 ];then
+        echo "the service $1 is running"
+        return 1
+    fi
+    return 0
+}
+
+if [ ${argcount} -eq 0 ];then
+    echo "start all avs service"
+    ser_list=`ls ${curpath}|grep camera_`
+    for service in $ser_list
+    do
+        check_process_status ${service}
+        if [ 0 -eq ${?} ]; then
+            echo "start service ${service}"
+            ./${service}
+        fi
+    done
+else
+    if [[ ${excname} == camera_* ]];then
+        check_process_status ${excname}
+        if [ 0 -eq ${?} ]; then
+            echo "start service ${excname}"
+            ./${excname}
+        fi
+    fi
+fi

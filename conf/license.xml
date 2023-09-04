@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<license>
+	<hostlist>
+		<host mac="08:00:27:f7:62:fc"/>
+	</hostlist>
+	<ability lens="100" live="600" record="100" playback="100"/>
+	<date>20230614</date>
+	<expires>10950</expires>
+	<hash>9BA1624F97F7AAE50A89F9CF0CE82DA7</hash>
+</license>

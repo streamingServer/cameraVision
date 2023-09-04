@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<networks version="1.0">
+  <!--network name="private" >
+    <map source="192.168.1.1"   nat="10.10.10.10"/>
+    <map source="192.168.1.1"   nat="10.10.10.10"/>
+    <map source="192.168.1.1"   nat="10.10.10.10"/>
+  </network>
+  <network name="public" >
+    <map source="192.168.1.1"   nat="211.10.10.10"/>
+    <map source="192.168.1.1"   nat="211.10.10.10"/>
+    <map source="192.168.1.1"   nat="211.10.10.10"/>
+  </network-->
+</networks>
